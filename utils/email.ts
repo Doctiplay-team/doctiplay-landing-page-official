@@ -2,9 +2,9 @@ import emailjs from '@emailjs/browser';
 
 // ⚠️ IMPORTANT: YOU MUST REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
 // Get them from: https://dashboard.emailjs.com/admin
-const SERVICE_ID = 'YOUR_SERVICE_ID';     // e.g. 'service_xp9...'
-const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';   // e.g. 'template_42...'
-const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // e.g. 'user_...'
+const SERVICE_ID = 'service_0a67uun';
+const TEMPLATE_ID = 'template_m8mi6og';
+const PUBLIC_KEY = 'jIvQAncaBcvIL-xY5';
 
 export interface PartnershipData {
     name: string;
