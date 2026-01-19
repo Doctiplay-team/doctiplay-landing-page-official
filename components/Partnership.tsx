@@ -13,7 +13,8 @@ const Partnership: React.FC<PartnershipProps> = ({ onOpenDrawer }) => {
     {
       name: "Faculté de Médecine et de Pharmacie de Rabat",
       logo: "https://fmp.um5.ac.ma/sites/default/files/logoREsss_1.png",
-      isPrimary: true
+      isPrimary: true,
+      url: "https://fmp.um5.ac.ma/"
     },
   ];
 
@@ -41,32 +42,48 @@ const Partnership: React.FC<PartnershipProps> = ({ onOpenDrawer }) => {
 
         {/* Logos Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch justify-center reveal" style={{ transitionDelay: '0.2s' }}>
-          {partners.map((partner, i) => (
-            <div
-              key={i}
-              className={`glass rounded-[2rem] border-white/60 flex flex-col items-center justify-center p-4 transition-all group overflow-hidden ${partner.isPrimary ? 'opacity-100 ring-2 ring-primary/20 shadow-xl bg-white/80' : 'opacity-40 grayscale hover:grayscale-0 hover:opacity-100'
-                }`}
-            >
-              {partner.isPrimary ? (
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-full h-24 relative">
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                    />
+          {partners.map((partner, i) => {
+            const CardContent = (
+              <>
+                {partner.isPrimary ? (
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-full h-24 relative">
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="text-[10px] font-display font-black text-slate-900 text-center leading-tight uppercase tracking-tighter">
+                      {partner.name}
+                    </div>
                   </div>
-                  <div className="text-[10px] font-display font-black text-slate-900 text-center leading-tight uppercase tracking-tighter">
+                ) : (
+                  <div className="text-[9px] font-mono font-bold text-slate-400 tracking-tighter group-hover:text-primary transition-colors text-center">
                     {partner.name}
                   </div>
-                </div>
-              ) : (
-                <div className="text-[9px] font-mono font-bold text-slate-400 tracking-tighter group-hover:text-primary transition-colors text-center">
-                  {partner.name}
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </>
+            );
+
+            const cardClasses = `glass rounded-[2rem] border-white/60 flex flex-col items-center justify-center p-2 transition-all group overflow-hidden ${partner.isPrimary ? 'opacity-100 ring-2 ring-primary/20 shadow-xl bg-white/80' : 'opacity-40 grayscale hover:grayscale-0 hover:opacity-100'}`;
+
+            return partner.url ? (
+              <a
+                key={i}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClasses}
+              >
+                {CardContent}
+              </a>
+            ) : (
+              <div key={i} className={cardClasses}>
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

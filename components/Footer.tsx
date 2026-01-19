@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPartnership, onOpenContact }) => 
                   <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-ping"></div>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <div className="text-[10px] font-display font-black uppercase tracking-widest opacity-50">{t.footer.contact_label}</div>
                 <div className="font-display font-bold text-sm tracking-tight">{t.footer.contact_action}</div>
               </div>
@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPartnership, onOpenContact }) => 
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-white/20 transition-colors">
                 <Handshake className="w-5 h-5" />
               </div>
-              <div className="text-left">
+              <div className="text-center">
                 <div className="text-[10px] font-display font-black uppercase tracking-widest opacity-50">{t.footer.partnership_label}</div>
                 <div className="font-display font-bold text-sm tracking-tight">{t.footer.partnership_action}</div>
               </div>

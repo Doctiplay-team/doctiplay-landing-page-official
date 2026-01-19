@@ -26,7 +26,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { label: t.navbar.sim, href: "#simulation" },
     { label: t.navbar.expertise, href: "#expertise" },
-    { label: t.navbar.ranks, href: "#progression" },
     { label: t.navbar.faq, href: "#faq" },
   ];
 
@@ -43,12 +42,11 @@ const Navbar: React.FC = () => {
     <nav className="fixed w-full z-[100] top-0 left-0 pt-4 px-4 transition-all duration-300 pointer-events-none">
       {/* Container: Floating capsule style */}
       <div className={`mx-auto pointer-events-auto transition-all duration-500 ease-out ${scrolled ? 'max-w-4xl' : 'max-w-6xl'}`}>
-        <div className={`relative flex items-center justify-between rounded-full border transition-all duration-500 shadow-2xl overflow-hidden ${
-          scrolled 
-          ? 'bg-slate-950/90 backdrop-blur-3xl border-white/10 py-2 px-4 sm:px-6 shadow-cyan-500/10' 
+        <div className={`relative flex items-center justify-between rounded-full border transition-all duration-500 shadow-2xl overflow-hidden ${scrolled
+          ? 'bg-slate-950/90 backdrop-blur-3xl border-white/10 py-2 px-4 sm:px-6 shadow-cyan-500/10'
           : 'bg-slate-950/70 backdrop-blur-2xl border-white/5 py-3 px-5 sm:px-8'
-        }`}>
-          
+          }`}>
+
           {/* Logo Area */}
           <a href="#simulation" onClick={(e) => handleNavClick(e, '#simulation')} className="flex items-center gap-3 shrink-0 mr-2 sm:mr-4 group">
             <div className="w-8 h-8 sm:w-10 sm:h-10 transform group-hover:scale-110 transition-transform">
@@ -59,21 +57,19 @@ const Navbar: React.FC = () => {
             </span>
           </a>
 
-          {/* Center Links - Scrollable horizontally on mobile (The "Defilable" part) */}
-          <div className="flex-1 overflow-x-auto scrollbar-hide px-2 mx-2">
-            <div className="flex items-center gap-6 sm:gap-10 w-max mx-auto px-4">
-              {navLinks.map((link, i) => (
-                <a 
-                  key={i} 
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-[10px] sm:text-[12px] font-display font-bold text-slate-300 hover:text-white uppercase tracking-[0.15em] whitespace-nowrap relative group py-2"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-            </div>
+          {/* Center Links - Desktop Only */}
+          <div className="hidden md:flex flex-1 items-center justify-center gap-8 px-4">
+            {navLinks.map((link, i) => (
+              <a
+                key={i}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-xs font-display font-bold text-slate-300 hover:text-white uppercase tracking-[0.15em] relative group py-2 transition-colors"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
           </div>
 
           {/* Language Switcher */}

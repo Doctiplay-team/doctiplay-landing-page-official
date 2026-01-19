@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Gamification from './components/Gamification';
+
 import Testimonials from './components/Testimonials';
 import Partnership from './components/Partnership';
 import PartnershipDrawer from './components/PartnershipDrawer';
@@ -49,7 +49,7 @@ const AppContent: React.FC = () => {
       <main className="flex-grow relative z-10">
         <Hero />
         <Features />
-        <Gamification />
+
         <Testimonials />
         <Partnership onOpenDrawer={() => setIsPartnershipOpen(true)} />
         <FAQ />
