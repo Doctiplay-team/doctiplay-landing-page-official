@@ -3,7 +3,12 @@ import { Loader2, Activity, Target, HeartPulse, Truck, Stethoscope, Sparkles, Ar
 import Monitor from './Monitor';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onOpenPartnership: () => void;
+  onOpenComingSoon: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOpenPartnership, onOpenComingSoon }) => {
   const [logs, setLogs] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedMode, setSelectedMode] = useState<'geste' | 'ambulance' | 'dechocage'>('ambulance');
@@ -56,7 +61,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="simulation" className="relative pt-24 sm:pt-44 pb-16 sm:pb-32 overflow-hidden min-h-screen flex flex-col items-center">
+    <section id="simulation" className="relative pt-32 sm:pt-44 pb-16 sm:pb-32 overflow-hidden min-h-screen flex flex-col items-center">
       {/* Background Ambience */}
       <div className="abstract-wave top-[10%] -left-[20%] opacity-50 sm:opacity-100"></div>
       <div className="abstract-wave bottom-[10%] -right-[20%] rotate-[165deg] opacity-50 sm:opacity-100"></div>
@@ -90,19 +95,19 @@ const Hero: React.FC = () => {
         {/* Primary CTA */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-12 sm:mb-24 animate-fade-in-up [animation-delay:300ms] w-full max-w-sm sm:max-w-none">
           <button
-            onClick={() => {
-              const configEl = document.getElementById('config-panel');
-              configEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }}
+            onClick={onOpenPartnership}
             className="group w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-white text-slate-950 rounded-full font-display font-black text-[12px] sm:text-sm tracking-widest uppercase flex items-center justify-center gap-4 hover:bg-primary hover:text-white transition-all shadow-[0_20px_50px_rgba(0,216,255,0.2)] hover:-translate-y-1"
           >
             {t.hero_extended.btn_command}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
 
-          <a href="#expertise" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-white/20 text-white font-display font-black text-[12px] sm:text-sm tracking-widest uppercase hover:bg-white/10 transition-all text-center">
+          <button
+            onClick={onOpenComingSoon}
+            className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-white/20 text-white font-display font-black text-[12px] sm:text-sm tracking-widest uppercase hover:bg-white/10 transition-all text-center"
+          >
             {t.hero.btn_tutorial}
-          </a>
+          </button>
         </div>
       </div>
 
@@ -141,17 +146,9 @@ const Hero: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Central Monitor Display */}
-        <div className="order-1 lg:order-2 lg:col-span-5 perspective-monitor py-4 sm:py-12">
-          {/* Reduce rotation on mobile for better usability */}
-          <div className="sm:rotate-3d-soft origin-center scale-100 sm:scale-110">
-            <Monitor logs={logs} />
-          </div>
-
-          {/* Mobile Start Button under monitor */}
-          <div className="mt-8 flex justify-center lg:hidden">
+          {/* Mobile Start Button - below Mode and Category */}
+          <div className="flex justify-center lg:hidden">
             <button
               onClick={startSimulation}
               disabled={isLoading}
@@ -160,6 +157,14 @@ const Hero: React.FC = () => {
               {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Zap className="w-5 h-5" />}
               {isLoading ? t.hero.btn_initializing : t.hero.btn_start}
             </button>
+          </div>
+        </div>
+
+        {/* Central Monitor Display */}
+        <div className="order-1 lg:order-2 lg:col-span-5 perspective-monitor py-4 sm:py-12">
+          {/* Reduce rotation on mobile for better usability */}
+          <div className="sm:rotate-3d-soft origin-center scale-100 sm:scale-110">
+            <Monitor logs={logs} />
           </div>
         </div>
 

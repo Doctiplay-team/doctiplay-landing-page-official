@@ -1,6 +1,8 @@
 import React from 'react';
 import { Handshake, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import fmpLogo from '../src/assets/logo-fmp.png';
+import chuLogo from '../src/assets/logo-chu.jpg';
 
 interface PartnershipProps {
   onOpenDrawer: () => void;
@@ -12,9 +14,15 @@ const Partnership: React.FC<PartnershipProps> = ({ onOpenDrawer }) => {
   const partners = [
     {
       name: "Faculté de Médecine et de Pharmacie de Rabat",
-      logo: "https://fmp.um5.ac.ma/sites/default/files/logoREsss_1.png",
+      logo: fmpLogo,
       isPrimary: true,
       url: "https://fmp.um5.ac.ma/"
+    },
+    {
+      name: "Centre Hospitalo-Universitaire Ibn Sina",
+      logo: chuLogo,
+      isPrimary: true,
+      url: "http://www.chisrabat.ma/"
     },
   ];
 
@@ -47,14 +55,14 @@ const Partnership: React.FC<PartnershipProps> = ({ onOpenDrawer }) => {
               <>
                 {partner.isPrimary ? (
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-full h-24 relative">
+                    <div className="w-full h-32 relative">
                       <img
                         src={partner.logo}
                         alt={partner.name}
-                        className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
                       />
                     </div>
-                    <div className="text-[10px] font-display font-black text-slate-900 text-center leading-tight uppercase tracking-tighter">
+                    <div className="text-[10px] font-display font-black text-slate-900 text-center leading-tight uppercase tracking-tighter max-w-[200px] mt-2">
                       {partner.name}
                     </div>
                   </div>
@@ -66,7 +74,7 @@ const Partnership: React.FC<PartnershipProps> = ({ onOpenDrawer }) => {
               </>
             );
 
-            const cardClasses = `glass rounded-[2rem] border-white/60 flex flex-col items-center justify-center p-2 transition-all group overflow-hidden ${partner.isPrimary ? 'opacity-100 ring-2 ring-primary/20 shadow-xl bg-white/80' : 'opacity-40 grayscale hover:grayscale-0 hover:opacity-100'}`;
+            const cardClasses = `flex flex-col items-center justify-center p-2 transition-all group overflow-hidden ${partner.isPrimary ? 'opacity-100 scale-110' : 'glass rounded-[2rem] border-white/60 opacity-40 grayscale hover:grayscale-0 hover:opacity-100'}`;
 
             return partner.url ? (
               <a

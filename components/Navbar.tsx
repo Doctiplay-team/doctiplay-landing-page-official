@@ -57,14 +57,14 @@ const Navbar: React.FC = () => {
             </span>
           </a>
 
-          {/* Center Links - Desktop Only */}
-          <div className="hidden md:flex flex-1 items-center justify-center gap-8 px-4">
+          {/* Center Links - Responsive */}
+          <div className="flex flex-1 items-center justify-center gap-3 sm:gap-6 md:gap-8 px-2 sm:px-4 overflow-x-auto">
             {navLinks.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-xs font-display font-bold text-slate-300 hover:text-white uppercase tracking-[0.15em] relative group py-2 transition-colors"
+                className="text-[9px] sm:text-[10px] md:text-xs font-display font-bold text-slate-300 hover:text-white uppercase tracking-[0.1em] sm:tracking-[0.15em] relative group py-2 transition-colors whitespace-nowrap"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>

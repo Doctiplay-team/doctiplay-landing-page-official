@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 
 // ⚠️ IMPORTANT: YOU MUST REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
 // Get them from: https://dashboard.emailjs.com/admin
-const SERVICE_ID = 'service_0a67uun';
+const SERVICE_ID = 'service_3m3f7yl';
 const TEMPLATE_ID = 'template_m8mi6og';
 const PUBLIC_KEY = 'jIvQAncaBcvIL-xY5';
 

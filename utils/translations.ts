@@ -88,7 +88,7 @@ export const translations = {
       a3: "Il complète la simulation physique en offrant un entraînement cognitif et décisionnel illimité, accessible partout et à tout moment.",
       q4: "Les protocoles médicaux sont-ils à jour ?",
       a4: "Oui, nos scénarios sont basés sur les dernières recommandations internationales (ERC, AHA, SFMU) et sont régulièrement révisés par des experts.",
-      q5: "How are errors handled in the simulation ?",
+      q5: "Comment les erreurs sont-elles gérées dans la simulation ?",
       a5: "Le patient se détériore de manière réaliste selon vos erreurs, permettant un apprentissage par l'échec sécurisé, suivi d'un débriefing constructif.",
       q6: "Peut-on utiliser Doctiplay pour des examens (ECOS) ?",
       a6: "Absolument. Le système de scoring objectif permet d'évaluer les compétences de raisonnement clinique de manière standardisée.",
@@ -142,7 +142,7 @@ export const translations = {
     },
     hero_extended: {
       subtext_full: "Doctiplay transforme la formation critique en expériences immersives de haute-fidélité. Maîtrisez l'imprévisible, sans aucun risque patient.",
-      btn_command: "COMMANDER L'IA",
+      btn_command: "DÉCOUVRIR DOCTIPLAY",
       btn_start_now: "LANCER MAINTENANT",
       debrief: {
         title: "Debriefing IA",
@@ -381,7 +381,7 @@ export const translations = {
     },
     hero_extended: {
       subtext_full: "Doctiplay transforms critical training into high-fidelity immersive experiences. Master the unpredictable, without any patient risk.",
-      btn_command: "ORDER AI",
+      btn_command: "DISCOVER DOCTIPLAY",
       btn_start_now: "LAUNCH NOW",
       debrief: {
         title: "AI Debriefing",
@@ -620,7 +620,7 @@ export const translations = {
     },
     hero_extended: {
       subtext_full: "Doctiplay تحول التدريب الحرج إلى تجارب غامرة عالية الدقة. أتقن ما لا يمكن التنبؤ به، دون أي مخاطرة بالمريض.",
-      btn_command: "اطلب الذكاء الاصطناعي",
+      btn_command: "اكتشف DOCTIPLAY",
       btn_start_now: "ابدأ الآن",
       debrief: {
         title: "تحليل الذكاء الاصطناعي",

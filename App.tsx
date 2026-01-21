@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Partnership from './components/Partnership';
 import PartnershipDrawer from './components/PartnershipDrawer';
 import ContactDrawer from './components/ContactDrawer';
+import ComingSoonModal from './components/ComingSoonModal';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -14,6 +15,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 const AppContent: React.FC = () => {
   const [isPartnershipOpen, setIsPartnershipOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -45,9 +47,20 @@ const AppContent: React.FC = () => {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
       />
+      <ComingSoonModal
+        isOpen={isComingSoonOpen}
+        onClose={() => setIsComingSoonOpen(false)}
+        onOpenContact={() => {
+          setIsComingSoonOpen(false);
+          setIsContactOpen(true);
+        }}
+      />
       <Navbar />
       <main className="flex-grow relative z-10">
-        <Hero />
+        <Hero
+          onOpenPartnership={() => setIsPartnershipOpen(true)}
+          onOpenComingSoon={() => setIsComingSoonOpen(true)}
+        />
         <Features />
 
         <Testimonials />
