@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "install:ppt": "cd ppt-deck && npm install",
     "build:ppt": "cd ppt-deck && npm run build",
-    "predeploy": "npm run install:ppt && npm run build:ppt && npm run build && mkdir -p dist/pitch && cp -r ppt-deck/dist/* dist/pitch/",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run install:ppt && npm run build:ppt && rm -rf public/pitch public/slides && mkdir -p public/pitch && cp -r ppt-deck/dist/* public/pitch/ && npm run build && touch dist/.nojekyll",
+    "deploy": "gh-pages -d dist -t"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
