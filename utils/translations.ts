@@ -50,7 +50,31 @@ export const translations = {
       f3_title: "Interaction Vocale",
       f3_desc: "Parlez à votre patient avec notre interface vocale avancée. Faites l'anamnèse. Appelez un spécialiste. Contrôle vocal totalement immersif.",
       f4_title: "Débriefing Détaillé",
-      f4_desc: "Chaque seconde est analysée. Obtenez un score granulaire sur le Diagnostic, la Prise en charge et la Sécurité."
+      f4_desc: "Chaque seconde est analysée. Obtenez un score granulaire sur le Diagnostic, la Prise en charge et la Sécurité.",
+      f1_items: [
+        "Réaction physiol. temps réel",
+        "Constantes dynamiques",
+        "Pharmacologie simulée",
+        "Choc et compensation"
+      ],
+      f2_items: [
+        "Analyse de dossier",
+        "Examens cliniques",
+        "Imagerie & Labos",
+        "Raisonnement déductif"
+      ],
+      f3_items: [
+        "Anamnèse naturelle",
+        "Appel spécialistes",
+        "Commandes vocales",
+        "Immersion totale"
+      ],
+      f4_items: [
+        "Sécurité et priorisation",
+        "Raisonnement diagnostique",
+        "Prise en charge",
+        "Communication équipe"
+      ]
     },
     gamification: {
       title: "Progression & Rangs",
@@ -77,29 +101,10 @@ export const translations = {
       t3_role: "Simulation Director"
     },
     faq: {
-      badge: "Support & Informations",
-      question_fallback: "Question non définie",
-      title: "FAQs",
-      q1: "Comment la physiologie du patient est-elle simulée ?",
-      a1: "Nous utilisons un moteur pharmacodynamique assisté par IA et physiologique qui réagit en temps réel à vos actions (médicaments, oxygène, massages).",
-      q2: "Quels types de cas cliniques sont disponibles ?",
-      a2: "La bibliothèque couvre les urgences cardiovasculaires, respiratoires, traumatologiques et pédiatriques, du cas simple au choc complexe.",
-      q3: "Ce simulateur remplace-t-il les mannequins de simulation ?",
-      a3: "Il complète la simulation physique en offrant un entraînement cognitif et décisionnel illimité, accessible partout et à tout moment.",
-      q4: "Les protocoles médicaux sont-ils à jour ?",
-      a4: "Oui, nos scénarios sont basés sur les dernières recommandations internationales (ERC, AHA, SFMU) et sont régulièrement révisés par des experts.",
-      q5: "Comment les erreurs sont-elles gérées dans la simulation ?",
-      a5: "Le patient se détériore de manière réaliste selon vos erreurs, permettant un apprentissage par l'échec sécurisé, suivi d'un débriefing constructif.",
-      q6: "Peut-on utiliser Doctiplay pour des examens (ECOS) ?",
-      a6: "Absolument. Le système de scoring objectif permet d'évaluer les compétences de raisonnement clinique de manière standardisée.",
-      q7: "L'interaction avec le patient est-elle réaliste ?",
-      a7: "Grâce au contrôle vocal, vous parlez directement au patient pour l'anamnèse, créant une immersion bien plus forte qu'un simple clic.",
-      q8: "Est-il possible de greffer ses propres scénarios ?",
-      a8: "Les institutions partenaires ont accès à un éditeur permettant de concevoir des cas spécifiques à leurs besoins pédagogiques.",
-      q9: "Comment la progression des étudiants est-elle suivie ?",
-      a9: "Un tableau de bord détaillé permet aux enseignants de suivre l'évolution des scores, d'identifier les lacunes et d'adapter leurs cours.",
-      q10: "Quels sont les prérequis techniques ?",
-      a10: "Une simple connexion internet et un navigateur moderne suffisent. L'application est optimisée pour PC, tablettes et smartphones."
+      badge: "Vision & Technologie",
+      title: "En savoir plus",
+      description: "Découvrez comment Doctiplay redéfinit la simulation médicale grâce à l'IA générative et une approche pédagogique immersive.",
+      action: "VISIONNER LA PRÉSENTATION"
     },
     partnership: {
       badge: "Collaboration Académique",
@@ -289,7 +294,31 @@ export const translations = {
       f3_title: "Voice Interaction",
       f3_desc: "Talk to your patient with our advanced voice AI. Take a history. Call a specialist. Fully immersive voice control.",
       f4_title: "Detailed Debriefing",
-      f4_desc: "Every second is analyzed. Get a granular score on Diagnostics, Management, and Safety."
+      f4_desc: "Every second is analyzed. Get a granular score on Diagnostics, Management, and Safety.",
+      f1_items: [
+        "Real-time physiological reaction",
+        "Dynamic vitals",
+        "Simulated pharmacology",
+        "Shock and compensation"
+      ],
+      f2_items: [
+        "Chart analysis",
+        "Clinical exams",
+        "Imaging & Labs",
+        "Deductive reasoning"
+      ],
+      f3_items: [
+        "Natural history taking",
+        "Specialist consults",
+        "Voice commands",
+        "Total immersion"
+      ],
+      f4_items: [
+        "Safety and prioritization",
+        "Diagnostic reasoning",
+        "Management",
+        "Team communication"
+      ]
     },
     gamification: {
       title: "Progression & Ranks",
@@ -316,29 +345,10 @@ export const translations = {
       t3_role: "Simulation Director"
     },
     faq: {
-      badge: "Support & Info",
-      question_fallback: "Undefined Question",
-      title: "FAQs",
-      q1: "How is patient physiology simulated?",
-      a1: "We use a pharmacodynamic and physiological engine that reacts in real-time to your actions (medications, oxygen, compressions).",
-      q2: "What types of clinical cases are available?",
-      a2: "The library covers cardiovascular, respiratory, trauma, and pediatric emergencies, from simple cases to complex shock.",
-      q3: "Does this replace simulation mannequins?",
-      a3: "It complements physical simulation by offering unlimited cognitive and decisional training, accessible anywhere, anytime.",
-      q4: "Are medical protocols up to date?",
-      a4: "Yes, our scenarios are based on the latest international guidelines (ERC, AHA, SFMU) and are regularly reviewed by experts.",
-      q5: "How are errors handled in the simulation?",
-      a5: "The patient deteriorates realistically based on your mistakes, allowing for safe learning through failure, followed by constructive debriefing.",
-      q6: "Can Doctiplay be used for exams (OSCEs)?",
-      a6: "Absolutely. The objective scoring system allows for standardized assessment of clinical reasoning skills.",
-      q7: "Is interaction with the patient realistic?",
-      a7: "Thanks to voice control, you speak directly to the patient for history taking, creating much stronger immersion than simple clicking.",
-      q8: "Can I create my own scenarios?",
-      a8: "Partner institutions have access to an editor to design specific cases for their pedagogical needs.",
-      q9: "How is student progress tracked?",
-      a9: "A detailed dashboard allows instructors to track score evolution, identify gaps, and adapt their teaching.",
-      q10: "What are the technical requirements?",
-      a10: "A simple internet connection and a modern browser are enough. The app is optimized for PCs, tablets, and smartphones."
+      badge: "Vision & Technology",
+      title: "Learn More",
+      description: "Discover how Doctiplay is redefining medical simulation through generative AI and an immersive pedagogical approach.",
+      action: "VIEW PRESENTATION"
     },
     partnership: {
       badge: "Academic Collaboration",
@@ -555,29 +565,10 @@ export const translations = {
       t3_role: "مديرة المحاكاة"
     },
     faq: {
-      badge: "الدعم والمعلومات",
-      question_fallback: "سؤال غير محدد",
-      title: "الأسئلة الشائعة",
-      q1: "كيف يتم محاكاة فسيولوجيا المريض؟",
-      a1: "نحن نستخدم محركًا دوائيًا وفسيولوجيًا يتفاعل في الوقت الفعلي مع أفعالك (الأدوية، الأكسجين، التدليك).",
-      q2: "ما هي أنواع الحالات السريرية المتاحة؟",
-      a2: "تغطي المكتبة حالات الطوارئ القلبية الوعائية والتنفسية والإصابات وطب الأطفال، من الحالات البسيطة إلى الصدمات المعقدة.",
-      q3: "هل يحل هذا المحاكي محل دمى المحاكاة؟",
-      a3: "إنه يكمل المحاكاة البدنية من خلال توفير تدريب إدراكي واتخاذ قرار غير محدود، متاح في أي مكان وفي أي وقت.",
-      q4: "هل البروتوكولات الطبية محدثة؟",
-      a4: "نعم، تعتمد سيناريوهاتنا على أحدث التوصيات الدولية (ERC, AHA, SFMU) ويتم مراجعتها بانتظام من قبل خبراء.",
-      q5: "كيف يتم التعامل مع الأخطاء في المحاكاة؟",
-      a5: "تتدهور حالة المريض بشكل واقعي بناءً على أخطائك، مما يسمح بالتعلم الآمن من خلال الفشل، متبوعًا بجلسة استخلاص معلومات بناءة.",
-      q6: "هل يمكن استخدام Doctiplay للامتحانات (ECOS)؟",
-      a6: "بالتأكيد. يسمح نظام التقييم الموضوعي بتقييم مهارات التقرار السريري بطريقة موحدة.",
-      q7: "هل التفاعل مع المريض واقعي؟",
-      a7: "بفضل التحكم الصوتي، تتحدث مباشرة إلى المريض لأخذ التاريخ المرضي، مما يخلق انغماساً أقوى بكثير من مجرد النقر.",
-      q8: "هل من الممكن إنشاء سيناريوهات خاصة بي؟",
-      a8: "المؤسسات الشريكة لديها وصول إلى محرر يسمح بتصميم حالات خاصة باحتياجاتهم التربوية.",
-      q9: "كيف يتم تتبع تقدم الطلاب؟",
-      a9: "تتيح لوحة تحكم مفصلة للمعلمين تتبع تطور الدرجات وتحديد الفجوات وتكييف دروسهم.",
-      q10: "ما هي المتطلبات التقنية؟",
-      a10: "يكفي وجود اتصال بسيط بالإنترنت ومتصفح حديث. التطبيق محسّن لأجهزة الكمبيوتر والأجهزة اللوحية والهواتف الذكية."
+      badge: "الرؤية والتكنولوجيا",
+      title: "أعرف أكثر",
+      description: "اكتشف كيف يعيد Doctiplay تعريف المحاكاة الطبية من خلال الذكاء الاصطناعي التوليدي ونهج تربوي غامر.",
+      action: "شاهد العرض"
     },
     partnership: {
       badge: "التعاون الأكاديمي",
